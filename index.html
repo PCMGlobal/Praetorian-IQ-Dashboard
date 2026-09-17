@@ -1351,9 +1351,7 @@ th.r { text-align: right; }
             </tr>
           </tbody>
         </table>
-        <div style="margin-top:12px;font-size:11px;color:var(--text-secondary);line-height:1.6;padding-top:10px;border-top:1px solid var(--border);">
-          AACE International accuracy classification. Class 2 = detailed engineering complete. Class 3 = study-level estimate, 3060% project definition.
-        </div>
+
       </div>
 
       <div class="card">
@@ -1404,7 +1402,7 @@ th.r { text-align: right; }
 
   <div class="ci-footer">
     <div class="footer-note">
-      Cost data sourced from PRISM (posted actuals) and PCML estimate files (ETL extracted) &nbsp;|&nbsp; Figures in Canadian dollars unless noted &nbsp;|&nbsp; Estimate totals reflect loaded snapshots only not projected or unverified values &nbsp;|&nbsp; Confidential
+      Cost data sourced from PRISM (posted actuals) &nbsp;|&nbsp; Figures in Canadian dollars unless noted &nbsp;|&nbsp; Estimate totals reflect loaded snapshots
     </div>
   </div>
 
@@ -3506,185 +3504,8 @@ function buildReportHTML(model) {
     'td{font-size:9.5pt;padding:5pt 7pt;border-bottom:0.5pt solid #E8E3DE;}' +
     'tfoot td{font-weight:bold;background:#F5E8E0;}' +
     '.footer{color:#64748B;font-size:8pt;margin-top:24pt;border-top:0.5pt solid #E8E3DE;padding-top:8pt;}' +
-    '
-
-/* ═══════════════════════════════════════════════════
-   RESPONSIVE DESIGN ADJUSTMENTS
-═══════════════════════════════════════════════════ */
-@media (max-width: 1200px) {
-  .header-home {
-    padding: 0 24px;
-    gap: 1rem;
-  }
-  .header-nav {
-    gap: 16px;
-  }
-  .nav-link {
-    font-size: 13px;
-  }
-  .footer-container {
-    grid-template-columns: 1.5fr 1fr 1fr;
-    gap: 2.5rem;
-  }
-}
-
-@media (max-width: 900px) {
-  .header-nav {
-    display: none;
-  }
-  .header-home {
-    padding: 0 20px;
-  }
-  .header-deep {
-    height: 60px;
-    font-size: 14px;
-  }
-  .footer-container {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  .footer-logo {
-    width: 250px;
-  }
-}
-
-@media (max-width: 480px) {
-  .header-home {
-    height: 60px;
-    padding: 0 16px;
-  }
-  .logo-icon, .logo-icon img {
-    height: 48px;
-  }
-  .header-cta {
-    padding: 8px 14px;
-    font-size: 12px;
-  }
-  .header-info-bar {
-    padding: 0 16px;
-    font-size: 11px;
-  }
-  .header-deep {
-    height: 50px;
-    font-size: 12px;
-  }
-}
-
-
-
-/* ═══════════════════════════════════════════════════
-   LAYOUT & SPACING OPTIMIZATION
-═══════════════════════════════════════════════════ */
-
-/* Improve screen padding and margins */
-.screen {
-  padding: 2rem;
-  min-height: 100vh;
-}
-
-/* Card spacing improvements */
-.card {
-  border-radius: 8px;
-  border: 1px solid var(--border);
-  background: var(--surface-1);
-  padding: 1.5rem;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
-  transition: box-shadow 0.2s, transform 0.2s;
-}
-
-.card:hover {
-  box-shadow: 0 4px 8px rgba(0,0,0,0.12);
-}
-
-/* Module card improvements */
-.module-card {
-  border-radius: 8px;
-  padding: 1.25rem;
-  background: var(--surface-1);
-  border: 1px solid var(--border);
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.module-card:hover {
-  border-color: var(--accent);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(176, 101, 51, 0.15);
-}
-
-/* KPI improvements */
-.kpi-card {
-  border-radius: 8px;
-  padding: 1.5rem;
-  background: var(--surface-1);
-  border-left: 4px solid var(--accent);
-  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
-}
-
-/* Table improvements */
-table {
-  border-collapse: collapse;
-  width: 100%;
-  font-size: 13px;
-}
-
-table th {
-  background: var(--accent-soft);
-  color: var(--navy);
-  padding: 12px;
-  text-align: left;
-  font-weight: 600;
-  border-bottom: 2px solid var(--accent);
-}
-
-table td {
-  padding: 12px;
-  border-bottom: 1px solid var(--border);
-}
-
-table tbody tr:hover {
-  background: var(--bg);
-}
-
-/* Button improvements */
-button {
-  border-radius: 6px;
-  font-weight: 600;
-  transition: all 0.2s;
-}
-
-button:hover:not(:disabled) {
-  transform: translateY(-1px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-}
-
-/* Input improvements */
-input, select, textarea {
-  border-radius: 6px;
-  border: 1px solid var(--border);
-  padding: 10px 12px;
-  font-family: inherit;
-  font-size: 13px;
-  transition: border-color 0.2s;
-}
-
-input:focus, select:focus, textarea:focus {
-  outline: none;
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(176, 101, 51, 0.1);
-}
-
-/* Screen transitions */
-.screen {
-  animation: fadeIn 0.3s ease-in;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-</style></head><body>' +
+    '' +
+    '</style></head><body>' +
     '<h1>Praetorian IQ Project Intelligence Report</h1>' +
     '<div class="subtitle">Prepared for PCML &nbsp;·&nbsp; Generated ' + esc(fmtDateTime(model.generatedAt)) + ' &nbsp;·&nbsp; CONFIDENTIAL</div>' +
     '<h2>AI Insight</h2>' + aiSectionHtml +
