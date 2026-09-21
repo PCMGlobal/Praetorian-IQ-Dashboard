@@ -2341,14 +2341,23 @@ Note: the Flotation and Concentrate Leaching/CCD/Detox process trains (8 near-cr
     </div>
 
     <!-- Input row -->
-    <div style="display:flex;gap:10px;margin-bottom:1.25rem;align-items:flex-start;">
-      <textarea id="aiQuestion" rows="3"
-        placeholder="Ask a question about your project costs…"
-        style="flex:1;padding:10px 14px;border:0.5px solid var(--border-strong);border-radius:var(--radius);font-family:inherit;font-size:13px;color:var(--text-primary);background:var(--surface-1);resize:vertical;outline:none;line-height:1.5;"></textarea>
-      <button onclick="aiAsk()"
-        style="padding:10px 22px;background:var(--navy,#003E52);color:#fff;border:none;border-radius:var(--radius);font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;white-space:nowrap;flex-shrink:0;">
-        Ask
-      </button>
+    <div style="margin:0 2rem 1.5rem 2rem;background:#f8f9fc;border:1.5px solid var(--navy);border-radius:10px;overflow:hidden;">
+      <div style="background:var(--navy);padding:10px 18px;display:flex;align-items:center;gap:10px;">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#B87D3A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        <span style="font-size:13px;font-weight:700;color:#fff;letter-spacing:0.04em;">Ask Claude about this data</span>
+        <span style="font-size:11px;color:#B87D3A;margin-left:auto;font-style:italic;">Powered by Claude · Praetorian IQ</span>
+      </div>
+      <div style="padding:14px 18px;">
+        <div style="display:flex;gap:10px;align-items:center;">
+          <textarea id="aiQuestion" rows="3"
+            placeholder="Ask a question about your project costs…"
+            style="flex:1;padding:9px 13px;border:1.5px solid #d0d5dd;border-radius:6px;font-family:inherit;font-size:13px;color:#1f2d5c;background:white;resize:vertical;outline:none;line-height:1.5;transition:border-color 0.2s;"></textarea>
+          <button onclick="aiAsk()"
+            style="padding:9px 20px;background:var(--accent);color:#fff;border:none;border-radius:6px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;white-space:nowrap;flex-shrink:0;transition:background 0.2s;align-self:flex-start;margin-top:2px;">
+            Ask AI
+          </button>
+        </div>
+      </div>
     </div>
 
     <!-- Loading indicator -->
@@ -2570,14 +2579,20 @@ Note: the Flotation and Concentrate Leaching/CCD/Detox process trains (8 near-cr
     </div>
 
     <!-- AI Question Field -->
-    <div style="background: var(--off-white);border-top:5px solid var(--copper);border-radius:0px;padding:1.25rem;margin-bottom:20px;">
-      <div style="font-size:12px;font-weight:700;color:var(--text-secondary);letter-spacing:0.05em;text-transform:uppercase;margin-bottom:8px;">Ask Claude about this schedule</div>
-      <div style="display:flex;gap:8px;">
-        <input type="text" id="soAiQuestion" placeholder="E.g., What's the critical path risk? How can we compress Grinding construction?" style="flex:1;padding:10px 12px;border:1px solid var(--gray-light);border-radius:0px;font-size:13px;font-family:inherit;" />
-        <button onclick="soAskClaude()" style="padding:10px 16px;background:var(--accent);color:white;border:none;border-radius:6px;font-weight:600;font-size:13px;cursor:pointer;transition:background 0.2s;">Ask</button>
+    <div style="margin:0 0 1.5rem 0;background:#f8f9fc;border:1.5px solid var(--navy);border-radius:10px;overflow:hidden;">
+      <div style="background:var(--navy);padding:10px 18px;display:flex;align-items:center;gap:10px;">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#B87D3A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        <span style="font-size:13px;font-weight:700;color:#fff;letter-spacing:0.04em;">AI Schedule Analysis</span>
+        <span style="font-size:11px;color:#B87D3A;margin-left:auto;font-style:italic;">Powered by Claude</span>
       </div>
-      <div id="soAiResponse" style="margin-top:12px;padding:12px;background:white;border-radius:6px;border:1px solid var(--border);display:none;font-size:13px;line-height:1.6;color:var(--text-primary);">
-        <!-- Claude response appears here -->
+      <div style="padding:14px 18px;">
+        <div style="display:flex;gap:10px;align-items:center;margin-bottom:0;">
+          <input type="text" id="soAiQuestion" placeholder="E.g., What's the critical path risk? How can we compress Grinding construction?" style="flex:1;padding:9px 13px;border:1.5px solid #d0d5dd;border-radius:6px;font-size:13px;font-family:inherit;color:#1f2d5c;outline:none;transition:border-color 0.2s;" />
+          <button onclick="soAskClaude()" style="padding:9px 20px;background:var(--accent);color:#fff;border:none;border-radius:6px;font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap;font-family:inherit;transition:background 0.2s;">Ask AI</button>
+        </div>
+        <div id="soAiResponse" style="margin-top:12px;padding:12px;background:white;border-radius:4px;border:1px solid var(--border);display:none;font-size:13px;line-height:1.6;color:var(--text-primary);">
+          <!-- Claude response appears here -->
+        </div>
       </div>
     </div>
 
